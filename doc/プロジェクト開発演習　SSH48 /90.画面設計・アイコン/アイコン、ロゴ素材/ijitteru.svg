@@ -26,9 +26,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.75548185"
-     inkscape:cx="-2525.7597"
-     inkscape:cy="1335.7073"
+     inkscape:zoom="0.26710317"
+     inkscape:cx="-3282.281"
+     inkscape:cy="1821.1673"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -57,6 +57,13 @@
      inkscape:label="レイヤー 1"
      inkscape:groupmode="layer"
      id="layer1">
+    <rect
+       y="-432.38205"
+       x="-1177.0239"
+       height="252.30243"
+       width="628.61786"
+       id="rect947"
+       style="opacity:0.73999999;fill:#d44444;fill-opacity:1;fill-rule:nonzero;stroke:#64e875;stroke-width:2.79999995;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal" />
     <rect
        style="opacity:0.73999999;fill:#d44444;fill-opacity:1;fill-rule:nonzero;stroke:#64e875;stroke-width:2.79999995;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
        id="rect894"
@@ -996,5 +1003,29 @@
          style="stroke-width:0.24022304"
          d="m -504.48158,37.12249 v -5.445055 h 5.44506 v 5.445055 z m 0,-43.5604457 v -5.4450553 h 5.44506 v 5.4450553 h 5.44505 V 4.4521558 h 5.44506 V 20.787323 h -5.44506 v 10.890112 h -5.44505 V 20.787323 h 5.44505 V 4.4521558 h -5.44505 V -6.4379557 Z" />
     </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.93888855px;line-height:3.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="-956.79553"
+       y="-261.24747"
+       id="text941"><tspan
+         sodipodi:role="line"
+         id="tspan939"
+         x="-956.79553"
+         y="-251.85786"
+         style="stroke-width:0.26458332" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:70.55555556px;line-height:3.25;font-family:PixelMplus10;-inkscape-font-specification:'PixelMplus10, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:3.465;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;"
+       x="-1129.7445"
+       y="-278.21759"
+       id="text945"
+       inkscape:export-xdpi="254"
+       inkscape:export-ydpi="254"><tspan
+         sodipodi:role="line"
+         id="tspan943"
+         x="-1129.7445"
+         y="-278.21759"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:70.55555556px;font-family:PixelMplus10;-inkscape-font-specification:'PixelMplus10, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr;text-anchor:start;stroke-width:3.465;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;">エアー来んやん！</tspan></text>
   </g>
 </svg>
