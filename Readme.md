@@ -12,6 +12,18 @@
 ### GAS(Google Apps Script)
 - JavaScript   
 
+## Raspberryにインストール
+管理者でログイン  
+'sudo su'  
+パッケージリストをアップデート  
+'apt-get update'  
+インストール済のソフトウェアをアップデート  
+'apt-get upgrade'  
+apacheをインストール  
+'apt-get install apache2'  
+PHPをインストール  
+'apt-get install php7.0'  
+
 ## メンバー
 - 木村魁人  
 - 小嶋大地  
