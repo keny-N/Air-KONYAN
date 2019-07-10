@@ -13,11 +13,16 @@
 - JavaScript   
 
 ## Raspberryにインストール
-'sudo su'
-'apt-get update'
-'apt-get upgrade'
-'apt-get install apache2'
-'apt-get install php7.0'
+管理者でログイン  
+'sudo su'  
+パッケージリストをアップデート  
+'apt-get update'  
+インストール済のソフトウェアをアップデート  
+'apt-get upgrade'  
+apacheをインストール  
+'apt-get install apache2'  
+PHPをインストール  
+'apt-get install php7.0'  
 
 ## メンバー
 - 木村魁人  
