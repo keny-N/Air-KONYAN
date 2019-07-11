@@ -1,5 +1,5 @@
 //var ss_ID= '1Xmea2bUvCaQ_rjoBEjKBKUTdZzVObS682iro_w0J8zI';
-var slackAccessToken = 'xoxp-616698328789-605378954498-664395269431-fb763c06d79716ce27204eba4f166f49';
+var slackAccessToken = '***';
 var slackApp = SlackApp.create(slackAccessToken);
 //'ssh48のスプレッドシート'をidから開く
 var ss = SpreadsheetApp.openById("1Xmea2bUvCaQ_rjoBEjKBKUTdZzVObS682iro_w0J8zI");
@@ -95,7 +95,7 @@ function doPost(e) {
     setTrigger();
   }
   else{
-    var ms = "現在投票中だよ"
+    var ms = "現在投票中です..."
     var channelId = "airboの部屋";
     var icon = ':icon_sad:';
     var options = {
