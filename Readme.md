@@ -30,8 +30,10 @@ PHPをインストール
 ### 上記URLからSlackApiにアクセス
 ![token](tokenimg.png)
 ### 緑の Create tokenを押し、トークンを取得  
-### /src/Gas/main.jsと/src/Gas/resultsend.jsと/src/Gas/iconchangesend.jsの指定されている箇所にコピペする
-
+/src/Gas/main.js  
+/src/Gas/resultsend.js  
+/src/Gas/iconchangesend.js  
+上記３箇所のjsファイルに指定されている箇所にコピペする  
 
 ## メンバー
 - 木村魁人  
