@@ -26,7 +26,8 @@ PHPをインストール
 'apt-get install php7.0'
 
 ## Slackのアクセストークンを取得
-[Slack トークン取得](https://api.slack.com/custom-integrations/legacy-tokens)
+[Slack Api](https://api.slack.com/custom-integrations/legacy-tokens)  
+### 上記URLからSlackApiにアクセス
 ![token](tokenimg.png)
 
 
