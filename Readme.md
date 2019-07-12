@@ -1,4 +1,3 @@
-<link href="/src/Readme.css" rel="stylesheet"></link>  
 
 # エアー来んやん！
 ## 概要
@@ -33,6 +32,3 @@ PHPをインストール
 - 田中奏多  
 - 中西翔太郎  
 - 中村賢哉  
-
-#### TEST
-
