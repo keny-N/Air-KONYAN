@@ -29,6 +29,8 @@ PHPをインストール
 [Slack Api](https://api.slack.com/custom-integrations/legacy-tokens)  
 ### 上記URLからSlackApiにアクセス
 ![token](tokenimg.png)
+### 緑の Create tokenを押し、トークンを取得  
+### /src/Gas/main.jsと/src/Gas/resultsend.jsと/src/Gas/iconchangesend.jsの指定されている箇所にコピペする
 
 
 ## メンバー
