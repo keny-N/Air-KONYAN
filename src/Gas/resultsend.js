@@ -28,7 +28,7 @@ function SendMessage(flag) {
       icon=':icon_sad:';
   }
 
-  var SLACK_ACCESS_TOKEN = 'xoxp-616698328789-605378954498-635814010837-44b6a0c8272544f5222b754ba655089d';
+  var SLACK_ACCESS_TOKEN = '自身の組織のアクセストークンを入力してください';
   var token = PropertiesService.getScriptProperties().getProperty('SLACK_ACCESS_TOKEN');
 
   var slackApp = SlackApp.create(SLACK_ACCESS_TOKEN); //SlackApp インスタンスの取得
