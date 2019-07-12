@@ -1,5 +1,5 @@
 //var ss_ID= '1Xmea2bUvCaQ_rjoBEjKBKUTdZzVObS682iro_w0J8zI';
-var slackAccessToken = '***';
+var slackAccessToken = '自身の組織のアクセストークンを入力してください';
 var slackApp = SlackApp.create(slackAccessToken);
 //'ssh48のスプレッドシート'をidから開く
 var ss = SpreadsheetApp.openById("1Xmea2bUvCaQ_rjoBEjKBKUTdZzVObS682iro_w0J8zI");
