@@ -27,6 +27,7 @@ PHPをインストール
 
 ## Slackのアクセストークンを取得
 [Slack トークン取得](https://api.slack.com/custom-integrations/legacy-tokens)
+![token](tokenimg.png)
 
 
 ## メンバー
