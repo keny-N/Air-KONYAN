@@ -1,5 +1,5 @@
 function sendSub(message,icon){
-var slackAccessToken = 'xoxp-616698328789-605378954498-664395269431-fb763c06d79716ce27204eba4f166f49';
+var slackAccessToken = '自身の組織のアクセストークンを入力してください';
 var POST_URL = 'https://slack.com/api/chat.postMessage';
   var payload = {
     token: slackAccessToken,
@@ -19,7 +19,7 @@ var POST_URL = 'https://slack.com/api/chat.postMessage';
 }
 
 function sendRas(message,icon){
-var slackAccessToken = 'xoxp-616698328789-605378954498-664395269431-fb763c06d79716ce27204eba4f166f49';
+var slackAccessToken = '自身の組織のアクセストークンを入力してください';
 var POST_URL = 'https://slack.com/api/chat.postMessage';
   var payload = {
     token: slackAccessToken,
@@ -37,7 +37,7 @@ var POST_URL = 'https://slack.com/api/chat.postMessage';
 }
 
 function sendFst(user,message,icon){
-var slackAccessToken = 'xoxp-616698328789-605378954498-664395269431-fb763c06d79716ce27204eba4f166f49';
+var slackAccessToken = '自身の組織のアクセストークンを入力してください';
 var POST_URL = 'https://slack.com/api/chat.postMessage';
   var payload = {
     token: slackAccessToken,
