@@ -10,21 +10,21 @@ function SendMessage(flag) {
 
   switch(flag){
     case 'up':
-      msg='投票の結果、エアコンの設定温度を1度あげたよ！';
+      msg='投票の結果、エアコンの温度をあげました！';
       msg1='up';
       icon=':icon_up:';
       break;
     case 'down':
-      msg='投票の結果、エアコンの設定温度を1度さげたよ！';
+      msg='投票の結果、エアコンの温度をさげました！';
       msg1='down';
       icon=':icon_down:'
       break;
     case 'cansel':
-      msg='色々あった結果、エアコンの温度変更を中止したよ・・・';
+      msg='色々あった結果、温度変更が中止されました...';
       icon=':icon_sad:';
       break;
     default:
-      msg='エラーがでたみたい・・・もう一度動作をやり直してね';
+      msg='エラーが出たようです...もう一度やり直してください';
       icon=':icon_sad:';
   }
 
