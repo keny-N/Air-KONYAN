@@ -23,7 +23,11 @@
 apacheをインストール  
 'apt-get install apache2'  
 PHPをインストール  
-'apt-get install php7.0'  
+'apt-get install php7.0'
+
+## Slackのアクセストークンを取得
+[Slack トークン取得](https://api.slack.com/custom-integrations/legacy-tokens)
+
 
 ## メンバー
 - 木村魁人  
