@@ -16,7 +16,7 @@
 ## Raspberryにインストール
 管理者でログイン  
 '''  
-sudo su
+sudo su  
 '''    
 パッケージリストをアップデート  
 'apt-get update'  
