@@ -15,15 +15,25 @@
 
 ## Raspberryにインストール
 管理者でログイン  
-'sudo su'  
+```   
+sudo su    
+```  
 パッケージリストをアップデート  
-'apt-get update'  
+```
+apt-get update
+``` 
 インストール済のソフトウェアをアップデート  
-'apt-get upgrade'  
+```
+apt-get upgrade
+```  
 apacheをインストール  
-'apt-get install apache2'  
+```
+apt-get install apache2
+```  
 PHPをインストール  
-'apt-get install php7.0'
+```
+apt-get install php7.0
+```
 
 ## Slackのアクセストークンを取得
 [Slack Api](https://api.slack.com/custom-integrations/legacy-tokens)  
