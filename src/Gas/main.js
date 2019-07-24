@@ -1,17 +1,16 @@
-//var ss_ID= '1Xmea2bUvCaQ_rjoBEjKBKUTdZzVObS682iro_w0J8zI';
 var slackAccessToken = '自身の組織のアクセストークンを入力してください';
 var slackApp = SlackApp.create(slackAccessToken);
 //'ssh48のスプレッドシート'をidから開く
-var ss = SpreadsheetApp.openById("1Xmea2bUvCaQ_rjoBEjKBKUTdZzVObS682iro_w0J8zI");
+var ss = SpreadsheetApp.openById("スプレッドシートのID");
 //テンプレのフォームをidから開く
-var form = FormApp.openById("1CcaOXTw-pYJR8VRTQrz8ge_boaqzSyN-71cn6bKfoyo");
+var form = FormApp.openById("フォームのID");
 var domain = 'ssh48';
 
 
 function doPost(e) {
-  //domain = e.parameter.team_domain;
   var icon=':icon_default:';
   var teamsheet = ss.getSheetByName('team');　//'team'シートを開く
+
   //リストの開始行とデータの入っている最終行の取得
   var StartRow = 2;
   var lastRow = teamsheet.getLastRow();
@@ -29,13 +28,8 @@ function doPost(e) {
   }
 
   //同組織の重複投票の排除
-  //fragnum = i+2;
-  //if(teamsheet.getRange(fragnum,2).getValue() == "T"){
-    //Logger.log(teamsheet.getRange(fragnum,2).getValue());
-    //teamsheet.getRange(fragnum,2).setValue('F');
   if(teamFrag[i] == 'T'){
     form.setAcceptingResponses(true); //投票可能
-    Logger.log(teamsheet.getRange(i+2,2).getValue());
     //現在投票を実行中を表すフラグを挿入
     teamsheet.getRange(i+2,2).setValue('F');
 
@@ -47,10 +41,8 @@ function doPost(e) {
     else {
       ms = 'cold';
     }
-    //var slackApp = SlackApp.create(slackAccessToken);
     // 対象チャンネル
     var channelId = "#gas_rest-ras_get";
-    //var channelId = "#実験";
     var options = {
       username: "gas-ras"
     }
@@ -68,9 +60,8 @@ function doPost(e) {
         choices.push(val["name"]);
       }
     }
-
-    //formのurl取得
-    var tmp = form.getPublishedUrl();
+    //投票用htmlページを取得
+    var tmp = 'http://3.112.144.149/ "チームドメイン" .html';
 
     //制限時間の計算
     var triggerDay = new Date();
@@ -87,13 +78,14 @@ function doPost(e) {
 
     //ユーザー別にリンクを生成しurlと制限時間を送信
     for(var i=0;i<choices.length;i++){
-      var message = "エアコンの温度変更の申請がありました！\nリンクから投票を行ってください\n"+tmp + "?entry.786710318=" + choices[i] + "\n投票の終了時刻は" + time + "です";
+      var message = "エアコンの温度変更の申請がありました！\nリンクから投票を行ってください\n"+ tmp + "?id=" + choices[i] + "\n投票の終了時刻は" + time + "です";
       sendFst(choices[i],message,icon);
     }
 
     //制限時間後に集計処理その他を実行
     setTrigger();
   }
+  //現在投票が行われていた場合の処理
   else{
     var ms = "現在投票中です..."
     var channelId = "airboの部屋";
@@ -108,7 +100,6 @@ function doPost(e) {
 }
 
 function Returns() {
-
   //トリガーの削除
   deleteTrigger();
   //'domain'シートを開く
@@ -128,20 +119,8 @@ function Returns() {
     //投票で選ばれた選択肢を配列に代入('下げる','上げる','何もしなし')
     nameList = sheet.getRange(StartRow,4,lastRow-StartRow+1,1).getValues();
     itemData = sheet.getRange(StartRow,3,lastRow-StartRow+1,1).getValues();
-    /*
-    //重複回答排除(ユーザー単位)
-    var x;
-    var y;
-    for(x=0;x<lastRow-2;x++){
-      for(y=x+1;y<lastRow-1;y++){
-        if(nameList[x].toString() == nameList[y].toString()){
-          itemData[y]=' ';
-        }
-      }
-    }
-    */
 
-    //新重複回答排除(ユーザー単位)
+    //新重複回答排除(ユーザー単位)後優先
     var x;
     var y;
     for(x=lastRow-2;x>=1;x--){
