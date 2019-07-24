@@ -3,10 +3,9 @@ header('Content-Type:application/json');
 $text = $_POST['text']; //slackからのPost[Json:text]を$textに代入
 
 
-
 //POST用関数
 function send_to_slack($message) {
-  $webhook_url = 'https://hooks.slack.com/services/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';   //Slack IncomingWebhook URL
+  $webhook_url = 'https://hooks.slack.com/services/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';   //Slack IncomingWebhook URL
   $options = array( //以下何やらなんやらやってくれている
     'http' => array(
       'method' => 'POST',
@@ -441,7 +440,7 @@ elseif(strpos($text,'up') !== false){ //温度を上げる処理
   send_to_slack($message); //処理を実行
 
 }else{
-  echo '{"エラーが発生しました"}';
+  echo '{"エラーが発生しました!"}';
 }
 
 ?>
