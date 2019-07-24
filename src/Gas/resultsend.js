@@ -37,12 +37,4 @@ function SendMessage(flag) {
 
   sendSub(msg,icon);
 
-//  var options = {
-//    channelId: "#実験", //チャンネル名
-//    userName: "Airbo", //投稿するbotの名前
-//    message: msg //投稿するメッセージ
-//  };
-
-//  slackApp.postMessage(options.channelId, options.message, {username: options.userName});
-
 }
