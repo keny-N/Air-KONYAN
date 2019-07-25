@@ -19,6 +19,10 @@ function SendMessage(flag) {
       msg1='down';
       icon=':icon_down:'
       break;
+    case 'equal':
+      msg='投票数が同じだったので、温度変更が中止されました...';
+      icon=':icon_sad:';
+      break;
     case 'cansel':
       msg='色々あった結果、温度変更が中止されました...';
       icon=':icon_sad:';

@@ -117,16 +117,32 @@ function Returns() {
   //投票が1件以上された場合以下集計処理等を実行
   if(lastRow>1){
     //投票で選ばれた選択肢を配列に代入('下げる','上げる','何もしなし')
-    nameList = sheet.getRange(StartRow,4,lastRow-StartRow+1,1).getValues();
+    nameList = sheet.getRange(StartRow,2,lastRow-StartRow+1,1).getValues();
     itemData = sheet.getRange(StartRow,3,lastRow-StartRow+1,1).getValues();
 
-    //新重複回答排除(ユーザー単位)後優先
+    //新重複回答排除(ユーザー単位)
     var x;
     var y;
+    var z = [];
+
+    //スラックに存在するIDを取得し偽造がないかを確認
+    var listurl = 'https://' + domain + '.slack.com/api/users.list?token=' + slackAccessToken;
+    var listres = UrlFetchApp.fetch(listurl);
+    var listjson = JSON.parse(listres.getContentText());
+    for each(var val in listjson["members"]) {
+      if(val["is_bot"] == false && val["real_name"] != "Slackbot"){
+        z.push(val["name"]);
+      }
+    }
+
     for(x=lastRow-2;x>=1;x--){
       for(y=x-1;y>=0;y--){
         if(nameList[x].toString() == nameList[y].toString()){
-          itemData[y]=' ';
+          itemData[y]='重複';
+        }else if(z.indexOf(nameList[y].toString()) == -1){
+          itemData[y]='偽造';
+        }else if(itemData[y] == ''){
+          itemData[y]='何もしない';
         }
       }
     }
@@ -153,9 +169,11 @@ function Returns() {
   }else if(upC<downC && noC<downC){
     //ここにdpwn操作
     flag='down';
-  }else{
+  }else if(noC>upC && noC>downC){
     //ここに中止動作
     flag='cansel';
+  }else if(upC==downC || upC==noC || downC==noC){
+    flag='equal';
   }
 
   SendMessage(flag);
