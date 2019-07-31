@@ -1,3 +1,4 @@
+
 # エアー来んやん！
 ## 概要
  - エアー来んやん！は、Slackのグループ内で、部屋のエアコンの温度を投票によって変更することができるシステムです。
@@ -11,6 +12,38 @@
 - Apache 2.4.25  
 ### GAS(Google Apps Script)
 - JavaScript   
+
+## Raspberryにインストール
+管理者でログイン  
+```   
+sudo su    
+```  
+パッケージリストをアップデート  
+```
+apt-get update
+``` 
+インストール済のソフトウェアをアップデート  
+```
+apt-get upgrade
+```  
+apacheをインストール  
+```
+apt-get install apache2
+```  
+PHPをインストール  
+```
+apt-get install php7.0
+```
+
+## Slackのアクセストークンを取得
+[Slack Api](https://api.slack.com/custom-integrations/legacy-tokens)  
+### 上記URLからSlackApiにアクセス
+![token](tokenimg.png)
+### 緑の Create tokenを押し、トークンを取得  
+/src/Gas/main.js  
+/src/Gas/resultsend.js  
+/src/Gas/iconchangesend.js  
+上記３箇所のjsファイルに指定されている箇所にコピペする  
 
 ## メンバー
 - 木村魁人  

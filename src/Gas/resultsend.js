@@ -10,25 +10,29 @@ function SendMessage(flag) {
 
   switch(flag){
     case 'up':
-      msg='投票の結果、エアコンの設定温度を1度あげたよ！';
+      msg='投票の結果、エアコンの温度をあげました！';
       msg1='up';
       icon=':icon_up:';
       break;
     case 'down':
-      msg='投票の結果、エアコンの設定温度を1度さげたよ！';
+      msg='投票の結果、エアコンの温度をさげました！';
       msg1='down';
       icon=':icon_down:'
       break;
+    case 'equal':
+      msg='投票数が同じだったので、温度変更が中止されました...';
+      icon=':icon_sad:';
+      break;
     case 'cansel':
-      msg='色々あった結果、エアコンの温度変更を中止したよ・・・';
+      msg='色々あった結果、温度変更が中止されました...';
       icon=':icon_sad:';
       break;
     default:
-      msg='エラーがでたみたい・・・もう一度動作をやり直してね';
+      msg='エラーが出たようです...もう一度やり直してください';
       icon=':icon_sad:';
   }
 
-  var SLACK_ACCESS_TOKEN = 'xoxp-616698328789-605378954498-635814010837-44b6a0c8272544f5222b754ba655089d';
+  var SLACK_ACCESS_TOKEN = '自身の組織のアクセストークンを入力してください';
   var token = PropertiesService.getScriptProperties().getProperty('SLACK_ACCESS_TOKEN');
 
   var slackApp = SlackApp.create(SLACK_ACCESS_TOKEN); //SlackApp インスタンスの取得
@@ -36,13 +40,5 @@ function SendMessage(flag) {
   sendRas(msg1,icon);
 
   sendSub(msg,icon);
-
-//  var options = {
-//    channelId: "#実験", //チャンネル名
-//    userName: "Airbo", //投稿するbotの名前
-//    message: msg //投稿するメッセージ
-//  };
-
-//  slackApp.postMessage(options.channelId, options.message, {username: options.userName});
 
 }

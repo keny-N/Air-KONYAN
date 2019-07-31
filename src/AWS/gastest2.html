@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+   <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+   <link rel="stylesheet" href="components/loader.css">
+   <script src="components/loader.js"></script>
+   <script>
+   window.onload = function(){
+     // URLのパラメータを取得
+     var urlParam = location.search.substring(1);
+  // URLにパラメータが存在する場合
+    if(urlParam) {
+    // 「&」が含まれている場合は「&」で分割
+      // var param = urlParam.split('&');
+
+    // パラメータを格納する用の配列を用意
+      var paramArray = [];
+
+    // 用意した配列にパラメータを格納
+      // for (i = 0; i < param.length; i++) {
+        var paramItem = urlParam.split('=');
+      }
+     document.getElementById("msg").value = paramItem[1];
+
+  }
+   </script>
+</head>
+<body>
+ <style type="text/css">
+ body{
+    //background-color: #565656;
+    color: #565656;
+    font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+
+  }
+  .cp_ipradio {
+	width: 50%;
+	margin: 2em auto;
+	text-align: left;
+}
+.cp_ipradio input[type='radio'] {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+.cp_ipradio label {
+	position: relative;
+	display: inline-block;
+	margin-right: 0px;
+	padding-right: 10px;
+	padding-left: 35px;
+	cursor: pointer;
+}
+.cp_ipradio label::before {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 24px;
+	height: 24px;
+	content: ' ';
+	border: 2px solid #5ab4bd;
+	border-radius: 4px;
+}
+.cp_ipradio input[type='radio'] + label::before {
+	border-radius: 18px;
+}
+.cp_ipradio input[type='radio']:checked + label {
+	padding-left: 0px;
+	color: #ffffff;
+}
+.cp_ipradio input[type='radio']:checked + label::before {
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: #5ab4bd;
+}
+/* Transition */
+.cp_ipradio label, .cp_ipradio label::before {
+	-webkit-transition: 0.25s all ease;
+	        transition: 0.25s all ease;
+}
+h1 {
+  position: relative;
+  padding: 0.6em;
+  background:#5ab4bd;
+}
+
+h1:after {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 30px;
+  border: 15px solid transparent;
+  border-top: 15px solid #5ab4bd;
+  width: 0;
+  height: 0;
+}
+.c-btn{
+  display: inline-block;
+  /*margin: 200px;*/
+  padding:10px 10px;
+  margin: 3px;
+  font-size: 16px;
+  font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+  border: 1px solid #5ab4bd;
+  background-color: #fff;
+  color: rgb(14, 17, 17);
+  border-radius: 5px;
+  position: relative;
+  top: 0;
+  transition: all 0.1s ease-in-out;
+}
+.c-btn:hover{
+  text-decoration: none;
+  color: #fff;
+}
+#a-hover{
+  margin-top: 10px;
+}
+.hover5{
+  box-shadow: 0 2px 0 rgba(72,144,151, 1);
+}
+a {
+text-decoration: none;
+}
+/*ふわっとするやつ*/
+.hover5:hover{
+ position: relative;
+ top: -1px;
+ background-color: rgb(189, 224, 226);
+ box-shadow: 0 3px 0 rgb(202, 237, 240);
+}
+</style>
+<form action="https://docs.google.com/forms/d/1BQ0LYq5OthhxwetB6mElvdAFVnzm1djD-FZzT7G3StA/edit" name="form1">
+<center><h1>エアー来んやん！</h1>
+<br></center>
+<input type="hidden" id="msg" value="" name="entry.786710318">
+<!-- <label for="msg">ユーザー</label>
+ <input id="msg" type="text" name="entry.786710318" value="" readonly/> -->
+<div class="cp_ipradio">
+ <center><p>エアコンの温度設定を…</p></center>
+ <br>
+ <br>
+ <center><input type="radio" name="entry.1290784759" id="a_rb1" value="１度上げる" />
+ <label for="a_rb1">　１度上げる</label><br><br></center>
+ <center><input type="radio" name="entry.1290784759" id="a_rb2" value="１度下げる"/>
+ <label for="a_rb2">　１度下げる</label><br><br></center>
+ <center><input type="radio" name="entry.1290784759" id="a_rb3" value="何もしない"/>
+ <label for="a_rb3">　何もしない</label><br><br></center>
+ </div>
+ <center>
+   <button type="submit" class="c-btn hover5" id="a-hover">　送信する　</button>
+ </center>
+</form>
+</body>
+</html>
