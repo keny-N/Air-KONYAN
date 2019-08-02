@@ -38,7 +38,7 @@ def post_slack(weather_info):
 
     request = urllib.request.Request(
         #Slack Incoming WebhookのURL
-        "https://hooks.slack.com/services/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",
+        "ここにSlack Incoming WebhookのURLを貼り付け",
         data=send_text.encode('utf-8'),
         method="POST"
     )
