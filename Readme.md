@@ -54,7 +54,7 @@ apt-get install php7.0
 - 中村賢哉  
 
 
-##ファイル内説明  
+## ファイル内説明  
 /src/Gas/main.js  
 上記ファイルが投票機能を制御しているjavascriptのプログラムになります  
 /src/AWS/gastest.html  
