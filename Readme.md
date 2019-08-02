@@ -52,3 +52,14 @@ apt-get install php7.0
 - 田中奏多  
 - 中西翔太郎  
 - 中村賢哉  
+
+
+##ファイル内説明  
+/src/Gas/main.js  
+上記ファイルが投票機能を制御しているjavascriptのプログラムになります  
+/src/AWS/gastest.html  
+上記ファイルが投票フォームのホームページを表示するHTMLになります  
+/src/AWS/lambda_function.py  
+上記ファイルがAWSのLambdaで実行されるファイルになります  
+/src/Raspberry/index.php  
+上記ファイルがラズベリーパイの操作を行っているファイルになります
