@@ -45,15 +45,6 @@ apt-get install php7.0
 /src/Gas/iconchangesend.js  
 上記３箇所のjsファイルに指定されている箇所にコピペする  
 
-## メンバー
-- 木村魁人  
-- 小嶋大地  
-- 酒井春華  
-- 田中奏多  
-- 中西翔太郎  
-- 中村賢哉  
-
-
 ## ファイル内説明  
 /src/Gas/main.js  
 上記ファイルが投票機能を制御しているjavascriptのプログラムになります  
